@@ -1,0 +1,9 @@
+version: '4' 
+services:
+  node-app:
+    build: 
+      context: . # the build path 
+      target: production # to target the stage image
+    environment:
+      - NODE_ENV=production
+    command: npm run start 
