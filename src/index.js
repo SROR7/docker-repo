@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const redis = require('redis');
 const { Client } = require('pg');
+const os = require('os');
+const { log } = require('console');
 
 //init app 
 const port = process.env.port || 4000;
@@ -51,6 +53,7 @@ client
 
 app.get( '/', (req, res) => {
     redisClient.set('products', 'products...')
+    console.log(`traffic from ${os.hostname}`);
     res.send('<h1>Hello Tresmerge!</h1>') 
 });
 
