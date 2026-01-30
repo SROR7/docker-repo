@@ -2,8 +2,7 @@ version: '4'
 services:
   node-app:
     container_name: node-app
-    image: 
-      sror/sror
+    image: sror/sror
     ports:
       - "4000:4000"
     env_file:
